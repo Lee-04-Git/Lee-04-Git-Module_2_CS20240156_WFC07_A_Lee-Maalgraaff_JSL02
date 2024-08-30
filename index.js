@@ -23,7 +23,12 @@ const addNewGoal = () => {
     const goalList = document.querySelector('#goalList');
     const establishedGoals = goalList.querySelectorAll('li')
    
-    
+    for (let goal of establishedGoals) {
+        if (goal.textContent === goalInput) {
+            alert('This goal already exists!');
+            return;
+        }
+    }
     
     const newGoal = document.createElement('li');
     newGoal.textContent = goalInput;
