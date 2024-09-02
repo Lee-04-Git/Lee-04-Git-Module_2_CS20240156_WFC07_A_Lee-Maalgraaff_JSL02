@@ -27,7 +27,7 @@ const addNewGoal = () => {
     for (let goal of establishedGoals) {
         // checks if the text of the goal(inside the li) is the same as the
         // new goal being added
-        if (goal.textContent === goalInput) {
+        if (goal.textContent.toLowerCase() === goalInput.toLowerCase()) {
             // if its already in the list, execute this alert
             alert('This goal already exists!');
             // stops the function from running any further
