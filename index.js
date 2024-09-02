@@ -21,11 +21,16 @@ document.querySelector('#submitWorkout').addEventListener('click', displayWorkou
 const addNewGoal = () => {
     const goalInput = document.querySelector('#goalInput').value;
     const goalList = document.querySelector('#goalList');
-    const establishedGoals = goalList.querySelectorAll('li')
+    const establishedGoals = goalList.querySelectorAll('li');
    
+    // checks each item in the list
     for (let goal of establishedGoals) {
+        // checks if the text of the goal(inside the li) is the same as the
+        // new goal being added
         if (goal.textContent === goalInput) {
+            // if its already in the list, execute this alert
             alert('This goal already exists!');
+            // stops the function from running any further
             return;
         }
     }
